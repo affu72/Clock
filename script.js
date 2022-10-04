@@ -9,6 +9,8 @@ const brand = document.querySelector(".brand");
 //     return ele === "e" ? ele.toUpperCase() : ele;
 //   })
 //   .join("");
+const banWords = ["harami", "chutiya", "madharchod", "kutta"];
+
 const arr = [];
 const dateLabel = document.querySelector(".tarikh");
 const dayLabel = document.querySelector(".day");
@@ -68,11 +70,32 @@ setInterval(clock, 1000);
 
 const btn = document.querySelector(".btn");
 const inputBrand = document.querySelector(".brand-name");
+const brandDesc = document.querySelector(".brand-des");
+
+let thatEle;
+
+const ban = function (value) {
+  return banWords.some((ele) => {
+    if (value.startsWith(ele) || value.endsWith(ele) || value.includes(ele)) {
+      thatEle = ele;
+      return true;
+    } else return false;
+  });
+};
 
 btn.addEventListener("click", function (e) {
   e.preventDefault();
   const inputVal = inputBrand.value;
-  arr.push(inputVal);
-  brand.textContent = `${inputVal}`;
+
+  if (ban(inputVal)) {
+    brandDesc.innerHTML = `Na, Na, Tum ${thatEle}`;
+    brandDesc.classList.add("flicker");
+  } else {
+    brandDesc.classList.remove("flicker");
+    arr.push(inputVal);
+    brand.textContent = `${inputVal}`;
+    brandDesc.textContent = "Put Your Own Brand Name";
+  }
+
   inputBrand.value = "";
 });

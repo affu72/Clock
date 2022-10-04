@@ -20,8 +20,8 @@ body {
   font-weight: 600;
 }
 
-.container{
-  margin:220px auto;
+.container {
+  margin: 220px auto;
 }
 .second {
   width: 2px;
@@ -220,4 +220,21 @@ label {
 .container {
   max-width: 1000px;
   margin: 100px auto;
+}
+
+.flicker {
+  color: red;
+  animation: flick 0.1s 3;
+}
+
+@keyframes flick {
+  0% {
+    transform: translateX(6px);
+  }
+  50% {
+    transform: translateX(-12px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
 }
