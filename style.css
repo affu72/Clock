@@ -221,7 +221,7 @@ label {
 }
 
 .flicker {
-  animation: flick 0.1s 3;
+  animation: flick 100ms 500ms 2;
 }
 
 @keyframes flick {

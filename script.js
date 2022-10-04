@@ -102,6 +102,6 @@ btn.addEventListener("click", function (e) {
 
   setTimeout(() => {
     brandDesc.classList.remove("flicker");
-  }, 100);
+  }, 2000);
   inputBrand.value = "";
 });
