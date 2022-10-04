@@ -88,7 +88,7 @@ btn.addEventListener("click", function (e) {
   const inputVal = inputBrand.value;
 
   if (ban(inputVal)) {
-    brandDesc.innerHTML = `Na, Na, Tum ${thatEle}`;
+    brandDesc.textContent = `Na, Na, Tum ${thatEle}`;
     brandDesc.classList.add("flicker");
   } else {
     brandDesc.classList.remove("flicker");
