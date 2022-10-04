@@ -213,3 +213,8 @@ label {
   text-align: center;
   font-size: 20px;
 }
+
+.container {
+  max-width: 1000px;
+  margin: 100px auto;
+}
