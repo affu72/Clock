@@ -5,7 +5,6 @@
 body {
   background-color: #f4fce3;
   min-height: 600px;
-  margin-top:220px;
 }
 .clock {
   width: 300px;
@@ -21,6 +20,9 @@ body {
   font-weight: 600;
 }
 
+.container{
+  margin:300px auto;
+}
 .second {
   width: 2px;
   height: 120px;
