@@ -186,8 +186,6 @@ form {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  align-item: center;
-  /*   margin-top: 200px; */
   width: 70%;
   margin: auto;
 }
@@ -223,7 +221,6 @@ label {
 }
 
 .flicker {
-  color: red;
   animation: flick 0.1s 3;
 }
 

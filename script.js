@@ -75,6 +75,7 @@ const brandDesc = document.querySelector(".brand-des");
 let thatEle;
 
 const ban = function (value) {
+  value = value.toLowerCase();
   return banWords.some((ele) => {
     if (value.startsWith(ele) || value.endsWith(ele) || value.includes(ele)) {
       thatEle = ele;
@@ -90,12 +91,17 @@ btn.addEventListener("click", function (e) {
   if (ban(inputVal)) {
     brandDesc.textContent = `Na, Na, Tum ${thatEle}`;
     brandDesc.classList.add("flicker");
+    brandDesc.style.color = "red";
   } else {
     brandDesc.classList.remove("flicker");
-    arr.push(inputVal);
-    brand.textContent = `${inputVal}`;
     brandDesc.textContent = "Put Your Own Brand Name";
+    arr.push(inputVal);
+    brandDesc.style.color = "black";
+    brand.textContent = `${inputVal}`;
   }
 
+  setTimeout(() => {
+    brandDesc.classList.remove("flicker");
+  }, 100);
   inputBrand.value = "";
 });
