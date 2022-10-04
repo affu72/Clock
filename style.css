@@ -20,6 +20,9 @@ body {
   font-weight: 600;
 }
 
+.container{
+  margin:220px auto;
+}
 .second {
   width: 2px;
   height: 120px;
