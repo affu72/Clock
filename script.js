@@ -9,7 +9,16 @@ const brand = document.querySelector(".brand");
 //     return ele === "e" ? ele.toUpperCase() : ele;
 //   })
 //   .join("");
-const banWords = ["harami", "chutiya", "madharchod", "kutta"];
+const banWords = [
+  "harami",
+  "chutiya",
+  "madharchod",
+  "kutta",
+  "laudu",
+  "lauda",
+  "land",
+  "gandu",
+];
 
 const arr = [];
 const dateLabel = document.querySelector(".tarikh");
@@ -23,7 +32,7 @@ for (let i = 0; i < 60; i++) {
 }
 
 const line = document.querySelectorAll(".lines");
-console.log(line);
+// console.log(line);
 line.forEach((ele, i) => {
   ele.style.transform = `rotate(${6 * (i + 1)}deg)`;
 });
